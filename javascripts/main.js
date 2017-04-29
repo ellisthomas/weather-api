@@ -1,11 +1,8 @@
 $(document).ready(function(){
 
-const apiKey = "";
+const apiKey = "75a3c6aef353b650190a67e16e7eae3f";
 
 let myZip;
-
-// results.weather[i].description
-
 
 $("#zipBtn").on("click", (e) => {
 		myZip = $("#usr").val();
