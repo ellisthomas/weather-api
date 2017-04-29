@@ -9,6 +9,7 @@ let myZip;
 
 $("#zipBtn").on("click", (e) => {
 		myZip = $("#usr").val();
+		$("#background").hide();
 		loadWeather(myZip).then((results) => {
 			console.log("results", results);
 			writeWeatherToDom(results);

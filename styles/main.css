@@ -1,2 +1,19 @@
 body {
-  background-color: #AAAAAA; }
+  background-color: #AAAAAA;
+  color: #FFFFFF; }
+
+#background {
+  background-image: url("http://www.cray.com/blog/wp-content/uploads/2015/09/Weather-Blog-Image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  left: 0;
+  margin: auto;
+  min-height: 100%;
+  min-width: 674px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1; }
