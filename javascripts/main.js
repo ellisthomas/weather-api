@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-const apiKey = "75a3c6aef353b650190a67e16e7eae3f";
+const apiKey = "";
 
 let myZip;
 
