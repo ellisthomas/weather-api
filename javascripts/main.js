@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-const apiKey = "";
+const apiKey = "fc99a286057960ebf48c352a87bb5f3e";
 
 let myZip;
 
@@ -35,8 +35,8 @@ $("#zipBtn").on("click", (e) => {
 	};
 ///////////////////////////////////////////
 
- $("#threeDay").on("click", "a", () => {
- 	myZip = $("#urs").val();
+ $("#threeDayBtn").on("click", (e) => {
+ 	myZip = $("#usr").val();
  	threeDayForecast(myZip).then((results) => {
  		console.log("results", results);
  		writeThreeDayDom(results);
@@ -57,7 +57,7 @@ $("#zipBtn").on("click", (e) => {
 
 	const threeDayForecast = (yourZip) => {
 		return new Promise((resolve, reject) => {
-			$.ajax(`api.openweathermap.org/data/2.5/forecast?zip=37211,us&appid=75a3c6aef353b650190a67e16e7eae3f`)
+			$.ajax(`api.openweathermap.org/data/2.5/forecast?zip={yourZip},us&units=imperial&appid=${apiKey}`)
 			// $.ajax(`api.openweathermap.org/data/2.5/forecast?zip={yourZip},us&units=imperial&appid={apiKey}`)
 			.done((data1) => resolve(data1))
 			.fail((error) => reject(error));
@@ -80,7 +80,7 @@ $("#zipBtn").on("click", (e) => {
 			outputString += `<h3>Temperature: ${results.main.temp}</h3>`;
 			outputString += `<h3>Air Pressure : ${results.main.pressure}</h3>`;
 			outputString += `<h3>Wind Speed: ${results.wind.speed}</h3>`;
-			outputString += `<a href="#">Three Day Forecast</a>`;
+			outputString += `<a class="three" href="#">Three Day Forecast</a>`;
 			outputString += `<br>`;
 			outputString += `<a href="#">Seven Day Forecast</a>`;
 		$("#weather").append(outputString);
